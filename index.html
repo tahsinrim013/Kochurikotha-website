@@ -1,105 +1,230 @@
-
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>কচুরীকথা | From Water Hyacinth to Useful Things</title>
+<title>Kochurikotha | Your Seed. Your Story.</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fbf9f0;color:#234536;line-height:1.8}
-header{padding:18px 7%;background:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#fbf9f0;
+  color:#234536;
+  line-height:1.75;
+}
+header{
+  padding:18px 7%;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
 .logo{font-size:25px;font-weight:bold;color:#28704e}
-nav a{margin:8px;color:#234536;text-decoration:none}
-.hero{padding:85px 8%;background:linear-gradient(120deg,#e2efdf,#f7f4e7)}
-.hero h1{font-size:clamp(35px,6vw,60px);line-height:1.25}
+nav a{
+  margin:6px 10px;
+  color:#234536;
+  text-decoration:none;
+  font-size:14px;
+}
+.hero{
+  padding:85px 8%;
+  background:linear-gradient(120deg,#e2efdf,#f7f4e7);
+}
+.hero h1{
+  font-size:clamp(38px,7vw,68px);
+  line-height:1.12;
+  margin:12px 0;
+}
 .hero h1 span{color:#28704e}
-.tag{color:#9a7431;font-weight:bold}
-.btn{display:inline-block;padding:12px 22px;background:#28704e;color:white;text-decoration:none;border-radius:25px}
+.tag{color:#9a7431;font-weight:bold;letter-spacing:1px}
+.btn{
+  display:inline-block;
+  padding:13px 24px;
+  background:#28704e;
+  color:white;
+  text-decoration:none;
+  border-radius:28px;
+  font-weight:bold;
+  margin-top:12px;
+}
+.btn:hover{background:#1e583d}
 section{padding:55px 8%}
-h2{font-size:30px;color:#28704e}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
-.card{background:white;padding:23px;border-radius:15px;box-shadow:0 4px 18px #00000010}
-.card h3{color:#28704e}
+h2{font-size:30px;color:#28704e;line-height:1.3}
 .tinted{background:#eaf2e7}
-footer{padding:30px 8%;background:#234536;color:white}
-.note{background:#fff3d9;padding:18px;border-left:4px solid #d5a94e}
+.steps p{
+  padding:14px 16px;
+  background:white;
+  border-radius:10px;
+  margin:12px 0;
+}
+.note{
+  background:#fff3d9;
+  padding:16px;
+  border-left:4px solid #d5a94e;
+  border-radius:6px;
+}
+.center{text-align:center}
+footer{
+  padding:30px 8%;
+  background:#234536;
+  color:white;
+}
+footer h2{color:#dcebd8}
+
+@media(max-width:600px){
+  header{padding:16px 5%}
+  nav{width:100%}
+  nav a{margin:4px 8px 4px 0}
+  .hero{padding:60px 7%}
+  section{padding:42px 7%}
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">কচুরীকথা 🌿</div>
-<nav>
-<a href="#about">আমাদের কথা</a>
-<a href="#products">পণ্য</a>
-<a href="#impact">প্রভাব</a>
-<a href="#plant">বীজ রোপণ</a>
-</nav>
+  <div class="logo">কচুরীকথা 🌿</div>
+  <nav>
+    <a href="#mission">Our Mission</a>
+    <a href="#plant">Planting Guide</a>
+    <a href="#share">Share Your Story</a>
+  </nav>
 </header>
 
 <div class="hero">
-<p> A SMALL IDEA FOR A GREENER TOMORROW </p>
-<h1>কচুরিপানা থেকে<br><span>সম্ভাবনার নতুন গল্প</span></h1>
-<p>অবহেলিত কচুরিপানা ও ব্যবহৃত কাগজকে কাজে লাগিয়ে পরিবেশবান্ধব কাগজ এবং প্রয়োজনীয় পণ্য তৈরির একটি তরুণ সামাজিক উদ্যোগ।</p>
-<p class="tag">From Water Hyacinth • To Useful Things</p>
-<a class="btn" href="#about">আমাদের উদ্যোগ জানুন</a>
+  <p class="tag">A SMALL IDEA FOR A GREENER TOMORROW</p>
+
+  <h1>
+    Your Seed.<br>
+    <span>Your Story.</span>
+  </h1>
+
+  <p>
+    Plant it, care for it, and share your
+    growing journey with Kochurikotha.
+    Every little step can contribute to a
+    greener tomorrow.
+  </p>
+
+  <a class="btn" href="#plant">Start Your Green Journey</a>
 </div>
 
-<section id="about">
-<h2>কচুরীকথা কী?</h2>
-<p>আমরা বিশ্বাস করি, পরিবেশের সমস্যা থেকেই তৈরি হতে পারে নতুন সম্ভাবনা। কচুরিপানা ও ব্যবহৃত কাগজকে পুনর্ব্যবহারের মাধ্যমে কাগজের ওপর চাপ কমানো এবং পরিবেশবান্ধব অভ্যাস গড়ে তোলাই আমাদের লক্ষ্য।</p>
-<div class="grid">
-<div class="card"><h3>🌿 পুনর্ব্যবহার</h3><p>কচুরিপানা ও ব্যবহৃত কাগজকে নতুন উপযোগী উপকরণে রূপ দেওয়া।</p></div>
-<div class="card"><h3>♻️ কম অপচয়</h3><p>ফেলে দেওয়া উপকরণকে নতুনভাবে কাজে লাগানো।</p></div>
-<div class="card"><h3>🌱 সচেতনতা</h3><p>পরিবেশবান্ধব জীবনযাপনে মানুষকে উৎসাহিত করা।</p></div>
-</div>
-</section>
+<section id="mission">
+  <h2>Our Green Mission</h2>
 
-<section class="tinted" id="products">
-<h2>আমাদের পণ্যের ভাবনা</h2>
-<p>প্রাকৃতিক উপকরণ ও পুনর্ব্যবহৃত কাগজের সম্ভাবনাকে কাজে লাগিয়ে ব্যবহারযোগ্য পণ্য তৈরি।</p>
-<div class="grid">
-<div class="card"><h3>📄 পরিবেশবান্ধব কাগজ</h3><p>কচুরিপানা ও ব্যবহৃত কাগজের আঁশ কাজে লাগিয়ে কাগজ তৈরির প্রচেষ্টা।</p></div>
-<div class="card"><h3>🔖 বীজযুক্ত বুকমার্ক</h3><p>ব্যবহারের পর মাটিতে রোপণ করে গাছ জন্মানোর সুযোগ।</p></div>
-<div class="card"><h3>✏️ বীজযুক্ত কলম</h3><p>লেখার উপকরণের সঙ্গে গাছ লাগানোর বার্তা।</p></div>
-<div class="card"><h3>✉️ খাম ও কাগজপণ্য</h3><p>দৈনন্দিন ব্যবহারের জন্য পুনর্ব্যবহৃত কাগজের সামগ্রী।</p></div>
-</div>
-</section>
+  <p>
+    Kochurikotha is a youth-led social initiative
+    exploring how water hyacinth and used paper
+    can be transformed into useful, more
+    environmentally conscious materials.
+  </p>
 
-<section id="impact">
-<h2>আমরা যে পরিবর্তন চাই</h2>
-<div class="grid">
-<div class="card"><h3>♻️ পুনর্ব্যবহার</h3><p>ব্যবহৃত কাগজের কার্যকর ব্যবহার বাড়ানো।</p></div>
-<div class="card"><h3>🌾 স্থানীয় উপকরণ</h3><p>কচুরিপানার মতো অবহেলিত উপকরণের সম্ভাবনা খুঁজে দেখা।</p></div>
-<div class="card"><h3>🏫 পরিবেশ শিক্ষা</h3><p>শিশু ও তরুণদের জলবায়ু পরিবর্তন ও প্লাস্টিক দূষণ সম্পর্কে সচেতন করা।</p></div>
-</div>
+  <p>
+    We also encourage people to care for plants
+    and make thoughtful everyday choices
+    for a greener tomorrow.
+  </p>
 </section>
 
 <section class="tinted" id="plant">
-<h2>বীজযুক্ত পণ্য ব্যবহারের পর</h2>
-<p>বীজযুক্ত বুকমার্ক বা কাগজের অংশে সত্যিই বীজ থাকলে সাধারণভাবে এই নিয়মগুলো অনুসরণ করতে পারো।</p>
-<div class="card">
-<p><b>১. কাগজ ভিজিয়ে নাও:</b> কয়েক ঘণ্টা পরিষ্কার পানিতে ভিজিয়ে রাখো।</p>
-<p><b>২. মাটিতে রাখো:</b> ঝুরঝুরে মাটির ওপর রেখে হালকা মাটি দিয়ে ঢেকে দাও।</p>
-<p><b>৩. পানি দাও:</b> মাটি স্যাঁতসেঁতে রাখবে, কিন্তু পানি জমতে দেবে না।</p>
-<p><b>৪. যত্ন নাও:</b> বীজের জাত অনুযায়ী আলো ও পানির ব্যবস্থা করো।</p>
-</div>
-<p class="note">মনে রেখো: প্রতিটি বীজের রোপণ-পদ্ধতি এক নয়। প্যাকেটে দেওয়া নির্দেশনাই অনুসরণ করবে।</p>
+  <h2>Your Simple Planting Guide</h2>
+
+  <p>
+    Start your planting journey with these
+    general steps and enjoy caring for your plant.
+  </p>
+
+  <div class="steps">
+
+    <p>
+      <strong>01 · Prepare the Soil</strong><br>
+      Choose a small pot or suitable place
+      with loose, well-draining soil.
+    </p>
+
+    <p>
+      <strong>02 · Plant the Seed</strong><br>
+      Place the seed in the soil and cover it
+      lightly. The right planting depth can
+      vary by seed.
+    </p>
+
+    <p>
+      <strong>03 · Water Gently</strong><br>
+      Moisten the soil gently. Keep it suitably
+      moist, not waterlogged.
+    </p>
+
+    <p>
+      <strong>04 · Give It Care</strong><br>
+      Place it where it can receive suitable
+      light and check the soil regularly.
+    </p>
+
+    <p>
+      <strong>05 · Watch It Grow</strong><br>
+      Be patient, care for your plant,
+      and enjoy every stage of its growth.
+    </p>
+
+  </div>
+
+  <p class="note">
+    <strong>A Little Reminder:</strong>
+    Seed needs are different. If your seed
+    package includes specific planting
+    instructions, always follow those
+    instructions first.
+  </p>
 </section>
 
-<section>
-<h2>ছোট্ট অভ্যাস, বড় সম্ভাবনা</h2>
-<p>কাগজের অপচয় কমাও, পুনর্ব্যবহারকে বেছে নাও, আর নিজের চারপাশের পরিবেশের যত্ন নাও।</p>
-<p><b>কচুরীকথা — From Water Hyacinth • To Useful Things</b></p>
+<section id="share" class="center">
+  <h2>Share Your Green Story</h2>
+
+  <p>
+    Is your plant growing?
+    We would love to hear about your experience.
+    Share a photo and tell us the story
+    of your plant.
+  </p>
+
+  <a
+    class="btn"
+    href="https://airtable.com/app64sY6bGiu7jHeH/paglwgv38lpwqZOZI/form"
+    target="_blank"
+    rel="noopener noreferrer">
+    Share Your Green Story
+  </a>
+</section>
+
+<section class="tinted center">
+  <h2>Small Actions. Greener Tomorrow.</h2>
+
+  <p>
+    Reuse thoughtfully, reduce waste,
+    grow something green, and inspire others
+    through your story.
+  </p>
+
+  <p>
+    <strong>
+      কচুরীকথা — From Water Hyacinth
+      • To Useful Things
+    </strong>
+  </p>
 </section>
 
 <footer>
-<h2 style="color:#dcebd8">কচুরীকথা 🌿</h2>
-<p>একটি তরুণ সামাজিক উদ্যোগ</p>
-<p>Barishal, Bangladesh</p>
+  <h2>কচুরীকথা 🌿</h2>
+  <p>A Youth-led Social Initiative</p>
+  <p>Barishal, Bangladesh</p>
 </footer>
 
 </body>
 </html>
-
