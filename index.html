@@ -3,85 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kochurikotha | Your Seed. Your Story.</title>
+<title>কচুরীকথা | Kochurikotha</title>
 
 <style>
-*{box-sizing:border-box}
+:root {
+  --green:#24583b;
+  --deep:#173d2a;
+  --cream:#faf8ef;
+  --pale:#eaf1e7;
+  --gold:#c6a65b;
+  --text:#344638;
+}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  margin:0;
   font-family:Arial,sans-serif;
-  background:#fbf9f0;
-  color:#234536;
-  line-height:1.75;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.7;
 }
 header{
-  padding:18px 7%;
-  background:#fff;
+  background:var(--cream);
+  padding:12px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:15px;
   flex-wrap:wrap;
-  gap:12px;
+  box-shadow:0 2px 12px #0000000c;
 }
-.logo{font-size:25px;font-weight:bold;color:#28704e}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:65px;height:65px;object-fit:contain}
+.brand strong{font-size:21px;color:var(--green)}
+nav{display:flex;align-items:center;gap:17px;flex-wrap:wrap}
 nav a{
-  margin:6px 10px;
-  color:#234536;
-  text-decoration:none;
-  font-size:14px;
+  text-decoration:none;color:var(--green);
+  font-size:14px;font-weight:bold;
+}
+.lang{
+  border:1px solid var(--green);background:var(--green);
+  color:white;padding:9px 16px;border-radius:25px;
+  cursor:pointer;font-weight:bold;
 }
 .hero{
-  padding:85px 8%;
-  background:linear-gradient(120deg,#e2efdf,#f7f4e7);
-}
-.hero h1{
-  font-size:clamp(38px,7vw,68px);
-  line-height:1.12;
-  margin:12px 0;
-}
-.hero h1 span{color:#28704e}
-.tag{color:#9a7431;font-weight:bold;letter-spacing:1px}
-.btn{
-  display:inline-block;
-  padding:13px 24px;
-  background:#28704e;
+  min-height:480px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:65px 20px;
   color:white;
-  text-decoration:none;
-  border-radius:28px;
-  font-weight:bold;
-  margin-top:12px;
+  background:linear-gradient(#102c1c88,#102c1c99),
+  url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1600&q=85")
+  center/cover;
 }
-.btn:hover{background:#1e583d}
-section{padding:55px 8%}
-h2{font-size:30px;color:#28704e;line-height:1.3}
-.tinted{background:#eaf2e7}
-.steps p{
-  padding:14px 16px;
-  background:white;
-  border-radius:10px;
-  margin:12px 0;
+.hero-content{max-width:760px}
+.hero h1{font-size:clamp(36px,6vw,58px);line-height:1.2;margin-bottom:20px}
+.hero p{font-size:18px;margin-bottom:28px}
+.hero a,.action{
+  display:inline-block;background:#f7f3df;color:var(--green);
+  padding:12px 25px;border-radius:30px;
+  text-decoration:none;font-weight:bold;
 }
-.note{
-  background:#fff3d9;
-  padding:16px;
-  border-left:4px solid #d5a94e;
-  border-radius:6px;
+.tagline{letter-spacing:2px;font-size:13px;margin-bottom:15px}
+section{padding:75px 8%}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:32px;color:var(--green);margin-bottom:8px}
+.section-title p{max-width:650px;margin:auto}
+.mission-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;max-width:1050px;margin:auto;
 }
-.center{text-align:center}
+.mission-card{
+  background:white;padding:28px 22px;border-radius:16px;
+  text-align:center;box-shadow:0 5px 20px #244b3510;
+}
+.mission-card .icon{font-size:35px;margin-bottom:12px}
+.mission-card h3{color:var(--green);margin-bottom:9px}
+.about{
+  background:var(--pale);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:35px;align-items:center;
+}
+.about img{
+  width:100%;height:320px;object-fit:cover;border-radius:18px;
+}
+.about h2{font-size:30px;color:var(--green);margin-bottom:15px}
+.guide{background:#fffdf7}
+.steps{
+  max-width:780px;margin:auto;
+  display:grid;gap:14px;
+}
+.step{
+  display:flex;align-items:flex-start;gap:17px;
+  padding:18px;background:var(--pale);border-radius:12px;
+}
+.step .icon{font-size:27px}
+.step h3{color:var(--green);font-size:17px}
+.note{max-width:780px;margin:22px auto 0;font-size:14px}
+.share{
+  text-align:center;color:white;
+  background:linear-gradient(#173d2ad9,#173d2ad9),
+  url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1500&q=85")
+  center/cover;
+}
+.share h2{font-size:32px;margin-bottom:12px}
+.share p{max-width:650px;margin:auto}
+.share .action{margin-top:25px}
+.gallery{
+  text-align:center;background:var(--pale);
+}
+.gallery h2{color:var(--green);font-size:30px}
+.gallery .gallery-icon{font-size:42px;margin-bottom:10px}
 footer{
-  padding:30px 8%;
-  background:#234536;
-  color:white;
+  background:var(--deep);color:white;text-align:center;
+  padding:30px 15px;
 }
-footer h2{color:#dcebd8}
-
-@media(max-width:600px){
-  header{padding:16px 5%}
-  nav{width:100%}
-  nav a{margin:4px 8px 4px 0}
-  .hero{padding:60px 7%}
-  section{padding:42px 7%}
+footer img{width:75px;height:75px;object-fit:contain;
+  background:var(--cream);border-radius:50%;padding:4px;margin-bottom:10px}
+footer p{font-size:14px}
+@media(max-width:700px){
+  header{justify-content:center}
+  nav{justify-content:center}
+  .about{grid-template-columns:1fr}
+  section{padding:52px 6%}
+  .hero{min-height:420px}
 }
 </style>
 </head>
@@ -89,142 +132,227 @@ footer h2{color:#dcebd8}
 <body>
 
 <header>
-  <div class="logo">কচুরীকথা 🌿</div>
+  <div class="brand">
+    <img src="logo.png" alt="Kochurikotha Logo">
+    <strong>কচুরীকথা</strong>
+  </div>
+
   <nav>
-    <a href="#mission">Our Mission</a>
-    <a href="#plant">Planting Guide</a>
-    <a href="#share">Share Your Story</a>
+    <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+    <a href="#mission" data-en="Our Mission" data-bn="আমাদের লক্ষ্য">Our Mission</a>
+    <a href="#guide" data-en="Planting Guide" data-bn="রোপণ নির্দেশিকা">Planting Guide</a>
+    <a href="#share" data-en="Share Story" data-bn="গল্প শেয়ার">Share Story</a>
+    <button class="lang" id="languageButton" onclick="toggleLanguage()">বাংলা</button>
   </nav>
 </header>
 
-<div class="hero">
-  <p class="tag">A SMALL IDEA FOR A GREENER TOMORROW</p>
-
-  <h1>
-    Your Seed.<br>
-    <span>Your Story.</span>
-  </h1>
-
-  <p>
-    Plant it, care for it, and share your
-    growing journey with Kochurikotha.
-    Every little step can contribute to a
-    greener tomorrow.
-  </p>
-
-  <a class="btn" href="#plant">Start Your Green Journey</a>
-</div>
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tagline"
+      data-en="FROM WATER HYACINTH • TO USEFUL THINGS"
+      data-bn="কচুরিপানা থেকে • প্রয়োজনীয় উপকরণ">
+      FROM WATER HYACINTH • TO USEFUL THINGS
+    </div>
+    <h1 data-en="Your Seed. Your Story."
+        data-bn="তোমার বীজ। তোমার গল্প।">
+      Your Seed. Your Story.
+    </h1>
+    <p data-en="A little care, a little patience, and a greener tomorrow. Begin your growing journey with Kochurikotha."
+       data-bn="একটু যত্ন, একটু ধৈর্য আর একটি সবুজ আগামীর প্রত্যাশা। কচুরীকথার সঙ্গে শুরু হোক তোমার বেড়ে ওঠার গল্প।">
+      A little care, a little patience, and a greener tomorrow. Begin your growing journey with Kochurikotha.
+    </p>
+    <a href="#guide" data-en="Start Growing ↓" data-bn="রোপণ শুরু করো ↓">Start Growing ↓</a>
+  </div>
+</section>
 
 <section id="mission">
-  <h2>Our Green Mission</h2>
-
-  <p>
-    Kochurikotha is a youth-led social initiative
-    exploring how water hyacinth and used paper
-    can be transformed into useful, more
-    environmentally conscious materials.
-  </p>
-
-  <p>
-    We also encourage people to care for plants
-    and make thoughtful everyday choices
-    for a greener tomorrow.
-  </p>
-</section>
-
-<section class="tinted" id="plant">
-  <h2>Your Simple Planting Guide</h2>
-
-  <p>
-    Start your planting journey with these
-    general steps and enjoy caring for your plant.
-  </p>
-
-  <div class="steps">
-
-    <p>
-      <strong>01 · Prepare the Soil</strong><br>
-      Choose a small pot or suitable place
-      with loose, well-draining soil.
+  <div class="section-title">
+    <h2 data-en="Our Green Mission" data-bn="আমাদের সবুজ লক্ষ্য">Our Green Mission</h2>
+    <p data-en="Turning environmental challenges into opportunities for a greener future."
+       data-bn="পরিবেশগত চ্যালেঞ্জকে কাজে লাগিয়ে একটি সবুজ ভবিষ্যৎ গড়ে তোলাই আমাদের লক্ষ্য।">
+      Turning environmental challenges into opportunities for a greener future.
     </p>
-
-    <p>
-      <strong>02 · Plant the Seed</strong><br>
-      Place the seed in the soil and cover it
-      lightly. The right planting depth can
-      vary by seed.
-    </p>
-
-    <p>
-      <strong>03 · Water Gently</strong><br>
-      Moisten the soil gently. Keep it suitably
-      moist, not waterlogged.
-    </p>
-
-    <p>
-      <strong>04 · Give It Care</strong><br>
-      Place it where it can receive suitable
-      light and check the soil regularly.
-    </p>
-
-    <p>
-      <strong>05 · Watch It Grow</strong><br>
-      Be patient, care for your plant,
-      and enjoy every stage of its growth.
-    </p>
-
   </div>
 
-  <p class="note">
-    <strong>A Little Reminder:</strong>
-    Seed needs are different. If your seed
-    package includes specific planting
-    instructions, always follow those
-    instructions first.
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="icon">🌿</div>
+      <h3 data-en="Nature's Resources" data-bn="প্রকৃতির সম্পদ">Nature's Resources</h3>
+      <p data-en="Exploring the potential of water hyacinth as a useful resource."
+         data-bn="কচুরিপানার মতো প্রাকৃতিক উপাদানের সম্ভাবনাকে কাজে লাগানো।">
+        Exploring the potential of water hyacinth as a useful resource.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <div class="icon">♻️</div>
+      <h3 data-en="Waste Reduction" data-bn="বর্জ্য হ্রাস">Waste Reduction</h3>
+      <p data-en="Encouraging reuse and reducing unnecessary waste through creativity."
+         data-bn="সৃজনশীলতার মাধ্যমে পুনর্ব্যবহারকে উৎসাহিত করা এবং অপ্রয়োজনীয় বর্জ্য কমানো।">
+        Encouraging reuse and reducing unnecessary waste through creativity.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <div class="icon">🌍</div>
+      <h3 data-en="Green Awareness" data-bn="পরিবেশ সচেতনতা">Green Awareness</h3>
+      <p data-en="Inspiring people to make thoughtful choices for the environment."
+         data-bn="পরিবেশের জন্য সচেতন ও দায়িত্বশীল সিদ্ধান্ত নিতে মানুষকে অনুপ্রাণিত করা।">
+        Inspiring people to make thoughtful choices for the environment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <img
+    src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1000&q=85"
+    alt="Green leaves and nature">
+  <div>
+    <h2 data-en="Small Actions. Greener Tomorrow."
+        data-bn="ছোট উদ্যোগ। সবুজ আগামীর পথে।">
+      Small Actions. Greener Tomorrow.
+    </h2>
+    <p data-en="Kochurikotha believes that meaningful change begins with small steps. By exploring the use of water hyacinth and used paper, we want to encourage resourcefulness, environmental awareness and responsible living."
+       data-bn="কচুরীকথা বিশ্বাস করে, অর্থবহ পরিবর্তন শুরু হয় ছোট ছোট পদক্ষেপ থেকে। কচুরিপানা ও ব্যবহৃত কাগজের ব্যবহারকে উৎসাহিত করে আমরা সম্পদের সঠিক ব্যবহার, পরিবেশ সচেতনতা এবং দায়িত্বশীল জীবনযাপনের বার্তা ছড়িয়ে দিতে চাই।">
+      Kochurikotha believes that meaningful change begins with small steps. By exploring the use of water hyacinth and used paper, we want to encourage resourcefulness, environmental awareness and responsible living.
+    </p>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="section-title">
+    <h2 data-en="Your Simple Planting Guide"
+        data-bn="সহজে বীজ রোপণের নির্দেশিকা">
+      Your Simple Planting Guide
+    </h2>
+    <p data-en="Ready to begin? Here are some general steps to help you care for your seed."
+       data-bn="বীজ রোপণ শুরু করতে প্রস্তুত? বীজের যত্ন নিতে কিছু সাধারণ নির্দেশনা দেওয়া হলো।">
+      Ready to begin? Here are some general steps to help you care for your seed.
+    </p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="icon">🪴</div>
+      <div>
+        <h3 data-en="01. Prepare the Soil" data-bn="০১. মাটি প্রস্তুত করো">01. Prepare the Soil</h3>
+        <p data-en="Choose a suitable pot or planting space and prepare loose, suitable soil."
+           data-bn="উপযুক্ত টব বা জায়গা বেছে নিয়ে ঝুরঝুরে ও উপযোগী মাটি প্রস্তুত করো।">
+          Choose a suitable pot or planting space and prepare loose, suitable soil.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="icon">🌱</div>
+      <div>
+        <h3 data-en="02. Plant the Seed" data-bn="০২. বীজ রোপণ করো">02. Plant the Seed</h3>
+        <p data-en="Place the seed carefully at the recommended depth for that seed."
+           data-bn="বীজের জন্য নির্ধারিত গভীরতা অনুযায়ী সাবধানে বীজটি রোপণ করো।">
+          Place the seed carefully at the recommended depth for that seed.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="icon">💧</div>
+      <div>
+        <h3 data-en="03. Water Gently" data-bn="০৩. আলতোভাবে পানি দাও">03. Water Gently</h3>
+        <p data-en="Water according to the seed's needs. Avoid overwatering."
+           data-bn="বীজের প্রয়োজন অনুযায়ী পানি দাও। অতিরিক্ত পানি দেওয়া থেকে বিরত থাকো।">
+          Water according to the seed's needs. Avoid overwatering.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="icon">☀️</div>
+      <div>
+        <h3 data-en="04. Provide Proper Care" data-bn="০৪. প্রয়োজনীয় যত্ন নাও">04. Provide Proper Care</h3>
+        <p data-en="Provide suitable sunlight and continue caring for your plant."
+           data-bn="উপযুক্ত সূর্যালোক নিশ্চিত করো এবং নিয়মিত গাছের যত্ন নাও।">
+          Provide suitable sunlight and continue caring for your plant.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="icon">🌸</div>
+      <div>
+        <h3 data-en="05. Enjoy the Growth" data-bn="০৫. বেড়ে ওঠা উপভোগ করো">05. Enjoy the Growth</h3>
+        <p data-en="Be patient and enjoy watching your plant grow."
+           data-bn="ধৈর্য ধরো এবং তোমার গাছের বেড়ে ওঠা উপভোগ করো।">
+          Be patient and enjoy watching your plant grow.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <p class="note"
+    data-en="Note: Different seeds may have different requirements. Always follow any specific instructions provided with your seed."
+    data-bn="বিশেষ দ্রষ্টব্য: বীজভেদে প্রয়োজনীয় যত্ন ভিন্ন হতে পারে। বীজের সঙ্গে দেওয়া নির্দিষ্ট নির্দেশনা থাকলে তা অনুসরণ করো।">
+    Note: Different seeds may have different requirements. Always follow any specific instructions provided with your seed.
   </p>
 </section>
 
-<section id="share" class="center">
-  <h2>Share Your Green Story</h2>
-
-  <p>
-    Is your plant growing?
-    We would love to hear about your experience.
-    Share a photo and tell us the story
-    of your plant.
-  </p>
-
-  <a
-    class="btn"
-    href="https://airtable.com/app64sY6bGiu7jHeH/paglwgv38lpwqZOZI/form"
-    target="_blank"
-    rel="noopener noreferrer">
+<section class="share" id="share">
+  <h2 data-en="Share Your Green Story"
+      data-bn="তোমার সবুজ গল্প শেয়ার করো">
     Share Your Green Story
+  </h2>
+  <p data-en="Every plant has a journey. Share your plant's photos and story with Kochurikotha. With your permission, selected stories may be featured in our Green Gallery."
+     data-bn="প্রতিটি গাছের বেড়ে ওঠার পেছনে থাকে একটি গল্প। তোমার গাছের ছবি ও গল্প কচুরীকথার সঙ্গে শেয়ার করো। তোমার অনুমতি নিয়ে নির্বাচিত গল্প আমাদের Green Gallery-তে প্রকাশ করা হতে পারে।">
+    Every plant has a journey. Share your plant's photos and story with Kochurikotha. With your permission, selected stories may be featured in our Green Gallery.
+  </p>
+  <a class="action"
+     href="https://airtable.com/app64sY6bGiu7jHeH/paglwgv38lpwqZOZI/form"
+     target="_blank" rel="noopener noreferrer"
+     data-en="Share Your Story ↗"
+     data-bn="তোমার গল্প শেয়ার করো ↗">
+    Share Your Story ↗
   </a>
 </section>
 
-<section class="tinted center">
-  <h2>Small Actions. Greener Tomorrow.</h2>
-
-  <p>
-    Reuse thoughtfully, reduce waste,
-    grow something green, and inspire others
-    through your story.
-  </p>
-
-  <p>
-    <strong>
-      কচুরীকথা — From Water Hyacinth
-      • To Useful Things
-    </strong>
+<section class="gallery">
+  <div class="gallery-icon">📸🌱</div>
+  <h2 data-en="Green Gallery" data-bn="সবুজের গ্যালারি">Green Gallery</h2>
+  <p data-en="A place for growing stories, shared experiences and little green achievements."
+     data-bn="বেড়ে ওঠার গল্প, অভিজ্ঞতা এবং ছোট ছোট সবুজ অর্জনের একটি জায়গা।">
+    A place for growing stories, shared experiences and little green achievements.
   </p>
 </section>
+</main>
 
 <footer>
-  <h2>কচুরীকথা 🌿</h2>
-  <p>A Youth-led Social Initiative</p>
-  <p>Barishal, Bangladesh</p>
+  <img src="logo.png" alt="Kochurikotha Logo">
+  <p><strong>কচুরীকথা | Kochurikotha</strong></p>
+  <p data-en="From Water Hyacinth • To Useful Things"
+     data-bn="কচুরিপানা থেকে • প্রয়োজনীয় উপকরণ">
+    From Water Hyacinth • To Useful Things
+  </p>
+  <p data-en="Growing a greener tomorrow, together."
+     data-bn="একসঙ্গে গড়ে তুলি সবুজ আগামীর পৃথিবী।">
+    Growing a greener tomorrow, together.
+  </p>
 </footer>
 
+<script>
+let currentLanguage = "en";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "bn" : "en";
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll("[data-en]").forEach(function(element) {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.getElementById("languageButton").textContent =
+    currentLanguage === "en" ? "বাংলা" : "English";
+}
+</script>
+
 </body>
-</html>
+  </html>
